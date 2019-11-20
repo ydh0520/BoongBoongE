@@ -82,36 +82,10 @@
                                 dataType:"json",
                                 success:function(data){
                                     app.result= data;
+                                    app.result.answer = $('#sentence').val();
                                 }
                             });
 
-
-                            app.result = {
-                                totalScore : 50,
-                                detail: [
-                                    {
-                                        sentence: '예시답안 1입니다',
-                                        score: 10
-                                    },
-                                    {
-                                        sentence: '예시답안 2입니다',
-                                        score: 20
-                                    },
-                                    {
-                                        sentence: '예시답안 3입니다',
-                                        score: 30
-                                    },
-                                    {
-                                        sentence: '예시답안 4입니다',
-                                        score: 40
-                                    },
-                                    {
-                                        sentence: '예시답안 5입니다',
-                                        score: 50
-                                    }
-                                ]
-                            }
-                            app.result.answer = $('#sentence').val();
                         })
                     }
                 })
