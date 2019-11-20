@@ -1,0 +1,39 @@
+.header img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.q {max-width: 500px; margin: 0 auto; outline: 0;}
+
+.q-image {position: relative; }
+.q-image img {width: 100%;}
+.q-image .blank {float: left; position: absolute; border: 3px dashed #f0f719;}
+
+.q-image .blank.hint {
+    animation: blinker 1s linear infinite;
+}
+
+.q-word .dragable-container div {display: inline;}
+
+.q-sentence input {max-width: 400px;}
+
+.bd-callout {
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #eee;
+    border-left-color: #48a8aa;
+    border-left-width: .25rem;
+    border-radius: .25rem;
+}
+
+@keyframes blinker {  
+    50% { opacity: 0; }
+}    
+
+[v-cloak] { display: none }
+
+.p-5{
+    border: 1px solid;
+    width: 600px;
+}

@@ -1,0 +1,916 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "status": "OK",
+            "sentence": [
+                "The soccer player is kicking a soccer ball.",
+                "The soccer player is kicking a ball.",
+                "The man is kicking a soccer ball.",
+                "The man is kicking a ball.",
+                "The soccer player is looking at a soccer ball."
+            ],
+            "object": [
+                {
+                    "x": 122,
+                    "y": 218,
+                    "w": 194,
+                    "h": 159,
+                    "value": "soccer ball",
+                    "type": "object"
+                },
+                {
+                    "x": 128,
+                    "y": 59,
+                    "w": 200,
+                    "h": 290,
+                    "value": "soccer player",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 2,
+            "status": "OK",
+            "sentence": [
+                "The basketball player is shooting a basketball.",
+                "The basketball player is throwing a basketball.",
+                "The man is shooting a basketball.",
+                "The man is throwing a basketball.",
+                "The man is throwing a ball."
+            ],
+            "object": [
+                {
+                    "x": 185,
+                    "y": 8,
+                    "w": 59,
+                    "h": 56,
+                    "value": "basketball ball",
+                    "type": "object"
+                },
+                {
+                    "x": 161,
+                    "y": 115,
+                    "w": 138,
+                    "h": 445,
+                    "value": "basketball player",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 3,
+            "status": "OK",
+            "sentence": [
+                "The elephant is riding in a circus ball.",
+                "The elephant is on a circus ball.",
+                "The elephant is on the ball.",
+                "The elephant is passing the ball.",
+                "The animal is on the ball."
+            ],
+            "object": [
+                {
+                    "x": 178,
+                    "y": 205,
+                    "w": 63,
+                    "h": 48,
+                    "value": "circus ball",
+                    "type": "object"
+                },
+                {
+                    "x": 74,
+                    "y": 23,
+                    "w": 229,
+                    "h": 183,
+                    "value": "elepant",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 4,
+            "status": "OK",
+            "sentence": [
+                "The farmer is riding the tractor.",
+                "The farmer is in the tractor.",
+                "The older is riding the tractor.",
+                "The man is riding the tractor.",
+                "The farmer is riding a car.",
+                "The older is riding a car.",
+                "The man is riding a car."
+            ],
+            "object": [
+                {
+                    "x": 17,
+                    "y": 45,
+                    "w": 368,
+                    "h": 210,
+                    "value": "tractor",
+                    "type": "object"
+                },
+                {
+                    "x": 168,
+                    "y": 71,
+                    "w": 116,
+                    "h": 66,
+                    "value": "farmer",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 5,
+            "status": "OK",
+            "sentence": [
+                "The bear and the hunter are fighting.",
+                "The bear and the man are fighting.",
+                "The bear and the hunter are shouting.The bear and the man are shouting.",
+                "The bear and the hunter are facing each other.",
+                "The bear and the man are facing each other."
+            ],
+            "object": [
+                {
+                    "x": 488,
+                    "y": 100,
+                    "w": 161,
+                    "h": 193,
+                    "value": "bear",
+                    "type": "object"
+                },
+                {
+                    "x": 50,
+                    "y": 100,
+                    "w": 130,
+                    "h": 139,
+                    "value": "hunter",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 6,
+            "status": "OK",
+            "sentence": [
+                "The whale and the ship are approaching each other.",
+                "The whale is approaching the ship.",
+                "The whale and the ship are moving.",
+                "The wale and the ship are on the sea.",
+                "The ship is approaching the whale."
+            ],
+            "object": [
+                {
+                    "x": 4,
+                    "y": 17,
+                    "w": 116,
+                    "h": 133,
+                    "value": "whale",
+                    "type": "object"
+                },
+                {
+                    "x": 128,
+                    "y": 93,
+                    "w": 241,
+                    "h": 93,
+                    "value": "ship",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 7,
+            "status": "OK",
+            "sentence": [
+                "The cleaner is replacing the vinyl in the trash can.",
+                "The cleaner is cleaning up the trash can.",
+                "The cleaner is repairing the trash can.",
+                "The cleaner is assembling the trash can",
+                "The cleaner is recycling."
+            ],
+            "object": [
+                {
+                    "x": 36,
+                    "y": 24,
+                    "w": 224,
+                    "h": 269,
+                    "value": "street cleaner",
+                    "type": "object"
+                },
+                {
+                    "x": 185,
+                    "y": 74,
+                    "w": 210,
+                    "h": 311,
+                    "value": "trash can",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 8,
+            "status": "OK",
+            "sentence": [
+                "The chick is sitting on the chicken.",
+                "The chick and chicken are in the box.",
+                "The chicken is bearing chicks."
+            ],
+            "object": [
+                {
+                    "x": 196,
+                    "y": 49,
+                    "w": 79,
+                    "h": 121,
+                    "value": "chick",
+                    "type": "object"
+                },
+                {
+                    "x": 43,
+                    "y": 0,
+                    "w": 320,
+                    "h": 348,
+                    "value": "chicken",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 9,
+            "status": "OK",
+            "sentence": [
+                "The student is writing with a pencil with a book next to her.",
+                "The student is studying with a pencil with a book next to her.",
+                "The student is holding with a pencil with a book next to her."
+            ],
+            "object": [
+                {
+                    "x": 144,
+                    "y": 151,
+                    "w": 51,
+                    "h": 102,
+                    "value": "pencil",
+                    "type": "object"
+                },
+                {
+                    "x": 162,
+                    "y": 51,
+                    "w": 208,
+                    "h": 192,
+                    "value": "student",
+                    "type": "object"
+                },
+                {
+                    "x": 0,
+                    "y": 117,
+                    "w": 143,
+                    "h": 140,
+                    "value": "book",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 10,
+            "status": "OK",
+            "sentence": [
+                "The surfer is surfing with surfing board.",
+                "The surfer is playing surfing with surfing board.",
+                "The surfer is enjoying surfing with surfing board.",
+                "The surfer is riding a surfing board."
+            ],
+            "object": [
+                {
+                    "x": 106,
+                    "y": 183,
+                    "w": 104,
+                    "h": 40,
+                    "value": "surfing board",
+                    "type": "object"
+                },
+                {
+                    "x": 169,
+                    "y": 45,
+                    "w": 138,
+                    "h": 136,
+                    "value": "surfer",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 11,
+            "status": "OK",
+            "sentence": [
+                "The fireman is running with a ladder.",
+                "The fireman is walking with a ladder.",
+                "The fireman is holding a ladder."
+            ],
+            "object": [
+                {
+                    "x": 166,
+                    "y": 71,
+                    "w": 146,
+                    "h": 196,
+                    "value": "fireman",
+                    "type": "object"
+                },
+                {
+                    "x": 4,
+                    "y": 1,
+                    "w": 372,
+                    "h": 195,
+                    "value": "ladder",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 12,
+            "status": "OK",
+            "sentence": [
+                "The carpenter is sawing a log.",
+                "The carpenter is cutting a log."
+            ],
+            "object": [
+                {
+                    "x": 245,
+                    "y": 36,
+                    "w": 115,
+                    "h": 228,
+                    "value": "carpenter",
+                    "type": "object"
+                },
+                {
+                    "x": 23,
+                    "y": 115,
+                    "w": 183,
+                    "h": 56,
+                    "value": "log",
+                    "type": "object"
+                },
+                {
+                    "x": 96,
+                    "y": 63,
+                    "w": 160,
+                    "h": 71,
+                    "value": "saw",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 13,
+            "status": "OK",
+            "sentence": [
+                "The cat is enjoying the stove.",
+                "The cat is having fun with the stove.",
+                "The cat is tapping the stove.",
+                "The cat is looking at the stove."
+            ],
+            "object": [
+                {
+                    "x": 142,
+                    "y": 193,
+                    "w": 230,
+                    "h": 274,
+                    "value": "cat",
+                    "type": "object"
+                },
+                {
+                    "x": 2,
+                    "y": 34,
+                    "w": 132,
+                    "h": 428,
+                    "value": "stove",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 14,
+            "status": "OK",
+            "sentence": [
+                "The dog and the cat are laughing.",
+                "The dog and the cat are opening their mouths.",
+                "There are cats and dogs."
+            ],
+            "object": [
+                {
+                    "x": 28,
+                    "y": 80,
+                    "w": 166,
+                    "h": 217,
+                    "value": "cat",
+                    "type": "object"
+                },
+                {
+                    "x": 194,
+                    "y": 8,
+                    "w": 182,
+                    "h": 290,
+                    "value": "dog",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 15,
+            "status": "OK",
+            "sentence": [
+                "The dolphin is bouncing up next to the zookeeper.",
+                "The zookeeper is watching the dolphin.",
+                "The dolphin is looking at the zookeeper.",
+                "The dolphin is flying next to the zookeeper."
+            ],
+            "object": [
+                {
+                    "x": 2,
+                    "y": 124,
+                    "w": 201,
+                    "h": 353,
+                    "value": "zookeeper",
+                    "type": "object"
+                },
+                {
+                    "x": 157,
+                    "y": 7,
+                    "w": 238,
+                    "h": 411,
+                    "value": "dolphin",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 16,
+            "status": "OK",
+            "sentence": [
+                "Bicycle and motorcycle are parked next to the stairs.",
+                "Bicycle and motorcycle are parked in the building.",
+                "Bicycle and motorcycle are parked."
+            ],
+            "object": [
+                {
+                    "x": 54,
+                    "y": 69,
+                    "w": 124,
+                    "h": 124,
+                    "value": "bicycle",
+                    "type": "object"
+                },
+                {
+                    "x": 212,
+                    "y": 9,
+                    "w": 182,
+                    "h": 254,
+                    "value": "motorcycle",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 17,
+            "status": "OK",
+            "sentence": [
+                "The pitcher is throwing a baseball.",
+                "The man is throwing a baseball.",
+                "The pitcher is stading."
+            ],
+            "object": [
+                {
+                    "x": 38,
+                    "y": 20,
+                    "w": 25,
+                    "h": 25,
+                    "value": "pitcher",
+                    "type": "object"
+                },
+                {
+                    "x": 100,
+                    "y": 90,
+                    "w": 212,
+                    "h": 366,
+                    "value": "baseball",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 18,
+            "status": "OK",
+            "sentence": [
+                "The teacher is teaching a student.",
+                "The student is learning from the teacher.",
+                "The student is studying.",
+                "The teacher is teaching.",
+                "The student is studying and the teacher is watching."
+            ],
+            "object": [
+                {
+                    "x": 80,
+                    "y": 130,
+                    "w": 139,
+                    "h": 306,
+                    "value": "student",
+                    "type": "object"
+                },
+                {
+                    "x": 190,
+                    "y": 40,
+                    "w": 141,
+                    "h": 441,
+                    "value": "teacher",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 19,
+            "status": "OK",
+            "sentence": [
+                "The doctor is examining the patient.",
+                "The patient is lying in a patient's uniform.",
+                "The doctor is examining."
+            ],
+            "object": [
+                {
+                    "x": 50,
+                    "y": 0,
+                    "w": 163,
+                    "h": 264,
+                    "value": "doctor",
+                    "type": "object"
+                },
+                {
+                    "x": 200,
+                    "y": 90,
+                    "w": 136,
+                    "h": 169,
+                    "value": "patient",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 20,
+            "status": "OK",
+            "sentence": [
+                "The man is climbing the stairs.",
+                "The man is carrying things.",
+                "A man is wearing a hat and a backpack."
+            ],
+            "object": [
+                {
+                    "x": 150,
+                    "y": 40,
+                    "w": 135,
+                    "h": 261,
+                    "value": "man",
+                    "type": "object"
+                },
+                {
+                    "x": 100,
+                    "y": 140,
+                    "w": 183,
+                    "h": 135,
+                    "value": "stair",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 21,
+            "status": "OK",
+            "sentence": [
+                "The bear and the cat are sleeping.",
+                "The cat is on the bear.",
+                "The bear is under the cat.",
+                "Bears are bigger than cats.",
+                "Cats are smaller than bears."
+            ],
+            "object": [
+                {
+                    "x": 90,
+                    "y": 140,
+                    "w": 243,
+                    "h": 142,
+                    "value": "bear",
+                    "type": "object"
+                },
+                {
+                    "x": 200,
+                    "y": 120,
+                    "w": 55,
+                    "h": 37,
+                    "value": "cat",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 22,
+            "status": "OK",
+            "sentence": [
+                "A dog and a cat are dancing.",
+                "The dog is on the left side of the cat.",
+                "The cat is on the right side of the dog.",
+                "The dog and the cat were excited."
+            ],
+            "object": [
+                {
+                    "x": 20,
+                    "y": 10,
+                    "w": 161,
+                    "h": 262,
+                    "value": "dog",
+                    "type": "object"
+                },
+                {
+                    "x": 200,
+                    "y": 60,
+                    "w": 191,
+                    "h": 213,
+                    "value": "cat",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 23,
+            "status": "OK",
+            "sentence": [
+                "The bird is sitting on the roof.",
+                "The bird is on the roof.",
+                "The roof is under the bird.",
+                "There is a small bird."
+            ],
+            "object": [
+                {
+                    "x": 0,
+                    "y": 0,
+                    "w": 306,
+                    "h": 265,
+                    "value": "roof",
+                    "type": "object"
+                },
+                {
+                    "x": 210,
+                    "y": 40,
+                    "w": 160,
+                    "h": 133,
+                    "value": "bird",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 24,
+            "status": "OK",
+            "sentence": [
+                "The ship is passing under the bridge.",
+                "The ship is under the bridge.",
+                "The bridge is on the ship.",
+                "The ship is floating on the water."
+            ],
+            "object": [
+                {
+                    "x": 0,
+                    "y": 70,
+                    "w": 399,
+                    "h": 94,
+                    "value": "bridge",
+                    "type": "object"
+                },
+                {
+                    "x": 50,
+                    "y": 160,
+                    "w": 261,
+                    "h": 52,
+                    "value": "ship",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 25,
+            "status": "OK",
+            "sentence": [
+                "A monkey is climbing up the tree.",
+                "The monkey dangles from the tree.",
+                "The monkey is resting on a tree."
+            ],
+            "object": [
+                {
+                    "x": 100,
+                    "y": 110,
+                    "w": 184,
+                    "h": 381,
+                    "value": "monky",
+                    "type": "object"
+                },
+                {
+                    "x": 110,
+                    "y": 0,
+                    "w": 93,
+                    "h": 600,
+                    "value": "tree",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 26,
+            "status": "OK",
+            "sentence": [
+                "The elephant is eating a banana.",
+                "The Elephant is eating a banana with his nose.",
+                "Bananas are being eaten by elephants.",
+                "Elephants have big ears."
+            ],
+            "object": [
+                {
+                    "x": 20,
+                    "y": 10,
+                    "w": 365,
+                    "h": 284,
+                    "value": "elepant",
+                    "type": "object"
+                },
+                {
+                    "x": 65,
+                    "y": 150,
+                    "w": 73,
+                    "h": 53,
+                    "value": "banana",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 27,
+            "status": "OK",
+            "sentence": [
+                "The man is using an umbrella.",
+                "The man is holding an umbrella.",
+                "The man is under an umbrella.",
+                "The umbrella is above the man."
+            ],
+            "object": [
+                {
+                    "x": 10,
+                    "y": 100,
+                    "w": 266,
+                    "h": 122,
+                    "value": "umbrella",
+                    "type": "object"
+                },
+                {
+                    "x": 130,
+                    "y": 200,
+                    "w": 200,
+                    "h": 378,
+                    "value": "man",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 28,
+            "status": "OK",
+            "sentence": [
+                "The police are driving a police car.",
+                "The police are in a police car.",
+                "The police are in the police car."
+            ],
+            "object": [
+                {
+                    "x": 200,
+                    "y": 0,
+                    "w": 112,
+                    "h": 124,
+                    "value": "police",
+                    "type": "object"
+                },
+                {
+                    "x": 10,
+                    "y": 60,
+                    "w": 400,
+                    "h": 238,
+                    "value": "police car",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 29,
+            "status": "OK",
+            "sentence": [
+                "The President is playing the piano.",
+                "The man is playing the piano.",
+                "The man is in front of the piano."
+            ],
+            "object": [
+                {
+                    "x": 70,
+                    "y": 30,
+                    "w": 109,
+                    "h": 193,
+                    "value": "president",
+                    "type": "object"
+                },
+                {
+                    "x": 170,
+                    "y": 0,
+                    "w": 228,
+                    "h": 224,
+                    "value": "piano",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 30,
+            "status": "OK",
+            "sentence": [
+                "The lion is hunting zebras.",
+                "The zebra is running away from the lion.",
+                "The lion is chasing the zebra.",
+                "The lion is behind the zebra."
+            ],
+            "object": [
+                {
+                    "x": 30,
+                    "y": 70,
+                    "w": 143,
+                    "h": 93,
+                    "value": "lion",
+                    "type": "object"
+                },
+                {
+                    "x": 140,
+                    "y": 55,
+                    "w": 219,
+                    "h": 115,
+                    "value": "zebra",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        },
+        {
+            "id": 31,
+            "status": "OK",
+            "sentence": [
+                "The bear is hunting fish.",
+                "The bear is eating fish.",
+                "The fish was caught by the bear."
+            ],
+            "object": [
+                {
+                    "x": 55,
+                    "y": 45,
+                    "w": 237,
+                    "h": 150,
+                    "value": "bear",
+                    "type": "object"
+                },
+                {
+                    "x": 285,
+                    "y": 100,
+                    "w": 54,
+                    "h": 63,
+                    "value": "fish",
+                    "type": "object"
+                }
+            ],
+            "verb": []
+        }
+    ]
+}

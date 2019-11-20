@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+        <link rel="stylesheet" href={{url_for('static',filename='css/common.css')}}>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.bundle.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.js"></script>
+        <script src="{{url_for('static',filename='js/plugins.js')}}"></script>
+        <!-- <script src="/resources/script/draggable/collidable.js"></script> -->
+        <script>
+            $(function(){
+                var question = {{data|safe}};
+                var currentDragId;
+                var currentCollidateId;
+
+                var app = new Vue({
+                    el: '#container',
+                    data: {
+                        stage: 'word',
+                        question: question,
+                        result: ''
+                    },
+                    mounted: function () {
+                        var draggableWord = new Draggable.default(document.querySelectorAll('.q'), {
+                            draggable: '.dragable-container div > button',
+                            collidables: '.q-image .blank',
+                            plugins: [Plugins.Collidable]
+                        });
+
+                        draggableWord.on('drag:start', function (event) {
+                            currentDragId = $(event.source).data('index')
+                            currentCollidateId = null;
+                            console.log("[drag:start]currentDragId::" + currentDragId)
+                        });
+
+                        draggableWord.on('collidable:in', function (event) {
+                            currentCollidateId = $(event.collidingElement).data('index');
+                            console.log("[collidable:in]currentCollidateId::" + currentCollidateId)
+                        });
+
+                        draggableWord.on('collidable:out', function (event) {
+                            currentCollidateId = null;
+                            console.log("[collidable:out]currentCollidateId::" + currentCollidateId)
+                        });
+
+                        draggableWord.on('drag:stop', function (event) {
+                            console.log("[drag:stop]currentDragId::" + currentDragId)
+                            console.log("[drag:stop]currentCollidateId::" + currentCollidateId)
+                            if (currentDragId === currentCollidateId) {
+                                toastr.success('정답입니다.');
+                                $('.q-word .dragable-container div').eq(parseInt(currentDragId)).find('button').removeClass('btn-secondary').addClass('btn-primary')
+                                $('.q-image div').eq(parseInt(currentDragId)).addClass('d-none');
+                            } else {
+                                toastr.error('오답입니다.');
+                                $('.q-image div').removeClass('hint');
+                                $('.q-image div').eq(parseInt(currentDragId)).addClass('hint');
+                            }
+
+                            if ($('.q-image div.d-none').length === app.question.object.length) {
+                                app.stage = 'sentence';
+                            }
+                        });
+
+                        $('form').submit(function(e) {
+                            e.preventDefault();
+
+                            // TODO ajax 통한 일치율 받아오기
+                            var input = $('#sentence').val();
+                            $.ajax({
+                                type:"GET",
+                                url:"/result",
+                                data:{id:{{index}},sentence:input},
+                                dataType:"json",
+                                success:function(data){
+                                    app.result= data;
+                                }
+                            });
+
+
+                            app.result = {
+                                totalScore : 50,
+                                detail: [
+                                    {
+                                        sentence: '예시답안 1입니다',
+                                        score: 10
+                                    },
+                                    {
+                                        sentence: '예시답안 2입니다',
+                                        score: 20
+                                    },
+                                    {
+                                        sentence: '예시답안 3입니다',
+                                        score: 30
+                                    },
+                                    {
+                                        sentence: '예시답안 4입니다',
+                                        score: 40
+                                    },
+                                    {
+                                        sentence: '예시답안 5입니다',
+                                        score: 50
+                                    }
+                                ]
+                            }
+                            app.result.answer = $('#sentence').val();
+                        })
+                    }
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div class="container" id="container" v-cloak>
+            <div class="q p-5">
+                <div class="header clearfix mb-4">
+                    <img src="{{url_for('static',filename='image/arrow-left.svg')}}" class="float-left" onclick="location.href='/';"/>
+                    <img src="{{url_for('static',filename='image/refresh.svg')}}" class="float-right" onclick="location.reload();"/>
+                </div>
+                <div class="q-image">
+                    <img src="static/image/{{index}}.jpg" class="rounded">
+                    <div v-for="(word,index) in question.object" class="blank" :style="'width:' + word.w + 'px; height:' + word.h + 'px; left: ' + word.x + 'px; top: ' + word.y + 'px;'" :data-index="index"></div>
+                </div>
+                <div class="q-word mt-3" v-if="stage === 'word'">
+                    <p>1단계. 아래 단어를 사진의 매칭되는 영역과 매칭시켜주세요.</p>
+                    <div class="dragable-container text-center">
+                        <div v-for="(word,index) in question.object" class="m-1">
+                            <button type="button" class="btn btn-secondary" :data-index="index" v-text="word.value"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="q-sentence text-center mt-3" :class="{'d-none' : stage !== 'sentence'}">
+                    <p class="text-left mb-1">2단계. 단어를을 이용하여 한 문장으로 만들어주세요.</p>
+                    <div class="text-center" v-if="result !== ''">
+                        <p class="text-info percent pb-0" v-text="'일치율 : ' + result.totalScore"></p>
+                        <a href="#" data-toggle="modal" data-target="#detailModal"><small>자세히보기</small></a>
+                    </div>
+                    <div v-if="result === ''">
+                        <div class="mb-2">
+                            <span v-for="(word,index) in question.object" class="d-inline mr-1" v-text="'#' + word.value"></span>
+                        </div>
+                        <form>
+                            <div class="form-group">
+                                <label for="sentence" class="sr-only">answer</label>
+                                <input type="text" autocomplete="off" class="form-control" id="sentence" placeholder="위 사진에 대한 설명을 문장으로 입력해주세요." required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-sm btn-block">제출</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel" aria-hidden="true" v-if="result !== ''">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div>
+                                <p class="mb-0">사용자 답변</p>
+                                <p v-text="result.answer"></p>
+                            </div>
+
+                            <hr/>
+
+                            <div>
+                                <p>모범 답안</p>
+                                <div class="examples">
+                                    <div class="example bd-callout" v-for="detail in result.detail">
+                                        <p class="mb-0" v-text="detail.sentence"></p>
+                                        <p class="mb-0" v-text="'일치율 : ' + detail.score"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
